@@ -40,6 +40,7 @@ public class CompassView extends RelativeLayout implements SensorEventListener {
     private static final boolean DEFAULT_SHOW_BORDER = false;
     private static final int DEFAULT_BORDER_COLOR = Color.parseColor("#1a1a1a");
 
+
     private ImageView mNeedleImageView;
     private TextView mDegreeTextView;
 
