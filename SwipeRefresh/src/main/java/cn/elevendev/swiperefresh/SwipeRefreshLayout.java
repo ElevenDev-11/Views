@@ -199,11 +199,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the static refresh view creator, if the refresh view is null and the frame be needed the
-     * refresh view,frame will use this creator to create refresh view.
-     *
-     * <p>设置默认的刷新视图构造器，当刷新视图为null且需要使用刷新视图时，Frame会使用该构造器构造刷新视图
-     *
+     * 设置默认的刷新视图构造器，当刷新视图为null且需要使用刷新视图时，Frame会使用该构造器构造刷新视图
      * @param creator The static refresh view creator
      */
     public static void setDefaultCreator(IRefreshViewCreator creator) {
@@ -750,14 +746,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set loadMore scroll target view,For example the content view is a FrameLayout,with a listView
-     * in it.You can call this method,set the listView as load more scroll target view. Load more
-     * compat will try to make it smooth scrolling.
-     *
-     * <p>设置加载更多时需要做滑动处理的视图。 例如在SmoothRefreshLayout中有一个CoordinatorLayout,
+     * 设置加载更多时需要做滑动处理的视图。 例如在SmoothRefreshLayout中有一个CoordinatorLayout,
      * CoordinatorLayout中有AppbarLayout、RecyclerView等，加载更多时希望被移动的视图为RecyclerVieW
      * 而不是CoordinatorLayout,那么设置RecyclerView为TargetView即可
-     *
      * @param view Target view
      */
     public void setScrollTargetView(View view) {
@@ -769,10 +760,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set custom LayoutManager
-     *
-     * <p>设置自定义布局管理器
-     *
+     * 设置自定义布局管理器
      * @param layoutManager The custom LayoutManager
      */
     public void setLayoutManager(@NonNull LayoutManager layoutManager) {
@@ -790,10 +778,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the layout mode
-     *
-     * <p>设置模式，默认为刷新模式，可配置为拉伸模式
-     *
+     * 设置模式，默认为刷新模式，可配置为拉伸模式
      * @param mode The layout mode. {@link Constants#MODE_DEFAULT}, {@link Constants#MODE_SCALE}
      */
     public void setMode(@Mode int mode) {
@@ -811,10 +796,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Whether to enable the synchronous scroll when load more completed.
-     *
-     * <p>当加载更多完成时是否启用同步滚动。
-     *
+     * 当加载更多完成时是否启用同步滚动。
      * @param enable enable
      */
     public void setEnableCompatSyncScroll(boolean enable) {
@@ -826,10 +808,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the custom offset calculator.
-     *
-     * <p>设置自定义偏移计算器
-     *
+     * 设置自定义偏移计算器
      * @param calculator Offset calculator
      */
     public void setIndicatorOffsetCalculator(IIndicator.IOffsetCalculator calculator) {
@@ -837,10 +816,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the listener to be notified when a refresh is triggered.
-     *
-     * <p>设置刷新监听回调
-     *
+     * 设置刷新监听回调
      * @param listener Listener
      */
     public <T extends OnRefreshListener> void setOnRefreshListener(T listener) {
@@ -848,10 +824,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Add a listener to listen the views position change event.
-     *
-     * <p>设置UI位置变化回调
-     *
+     * 设置UI位置变化回调
      * @param listener Listener
      */
     public void addOnUIPositionChangedListener(@NonNull OnUIPositionChangedListener listener) {
@@ -864,10 +837,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * remove the listener.
-     *
-     * <p>移除UI位置变化监听器
-     *
+     * 移除UI位置变化监听器
      * @param listener Listener
      */
     public void removeOnUIPositionChangedListener(@NonNull OnUIPositionChangedListener listener) {
@@ -877,10 +847,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Add a listener when status changed.
-     *
-     * <p>添加个状态改变监听
-     *
+     * 添加个状态改变监听
      * @param listener Listener that should be called when status changed.
      */
     public void addOnStatusChangedListener(@NonNull OnStatusChangedListener listener) {
@@ -893,10 +860,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * remove the listener.
-     *
-     * <p>移除状态改变监听器
-     *
+     * 移除状态改变监听器
      * @param listener Listener
      */
     public void removeOnStatusChangedListener(@NonNull OnStatusChangedListener listener) {
@@ -906,11 +870,8 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set a sync scrolling callback when refresh competed.
-     *
-     * <p>设置同步滚动回调，可使用该属性对内容视图做滑动处理。例如内容视图是ListView，完成加载更多时，
+     * 设置同步滚动回调，可使用该属性对内容视图做滑动处理。例如内容视图是ListView，完成加载更多时，
      * 需要将加载出的数据显示出来，那么设置该回调，每次Footer回滚时拿到滚动的数值对ListView做向上滚动处理，将数据展示处理
-     *
      * @param callback a sync scrolling callback when refresh competed.
      */
     public void setOnSyncScrollCallback(OnSyncScrollCallback callback) {
@@ -918,12 +879,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set a callback to override {@link SmoothRefreshLayout#isNotYetInEdgeCannotMoveHeader()}
-     * method. Non-null callback will return the value provided by the callback and ignore all
-     * internal logic.
-     *
-     * <p>设置{@link SmoothRefreshLayout#isNotYetInEdgeCannotMoveHeader()}的重载回调，用来检测内容视图是否在顶部
-     *
+     * 设置{@link SmoothRefreshLayout#isNotYetInEdgeCannotMoveHeader()}的重载回调，用来检测内容视图是否在顶部
      * @param callback Callback that should be called when isChildNotYetInEdgeCannotMoveHeader() is
      *     called.
      */
@@ -932,11 +888,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set a callback to override {@link SmoothRefreshLayout#isNotYetInEdgeCannotMoveFooter()}
-     * method. Non-null callback will return the value provided by the callback and ignore all
-     * internal logic.
-     *
-     * <p>设置{@link SmoothRefreshLayout#isNotYetInEdgeCannotMoveFooter()}的重载回调，用来检测内容视图是否在底部
+     * 设置{@link SmoothRefreshLayout#isNotYetInEdgeCannotMoveFooter()}的重载回调，用来检测内容视图是否在底部
      *
      * @param callback Callback that should be called when isChildNotYetInEdgeCannotMoveFooter() is
      *     called.
@@ -946,10 +898,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set a callback to make sure you need to customize the specified trigger the auto load more
-     * rule.
-     *
-     * <p>设置自动加载更多的触发条件回调，可自定义具体的触发自动加载更多的条件
+     * 设置自动加载更多的触发条件回调，可自定义具体的触发自动加载更多的条件
      *
      * @param callBack Customize the specified triggered rule
      */
@@ -958,10 +907,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set a callback to make sure you need to customize the specified trigger the auto refresh
-     * rule.
-     *
-     * <p>设置滚到到顶自动刷新的触发条件回调，可自定义具体的触发自动刷新的条件
+     * 设置滚到到顶自动刷新的触发条件回调，可自定义具体的触发自动刷新的条件
      *
      * @param callBack Customize the specified triggered rule
      */
@@ -974,10 +920,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set a hook callback when the refresh complete event be triggered. Only can be called on
-     * refreshing.
-     *
-     * <p>设置一个头部视图刷新完成前的Hook回调
+     * >设置一个头部视图刷新完成前的Hook回调
      *
      * @param callback Callback that should be called when refreshComplete() is called.
      */
@@ -988,10 +931,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set a hook callback when the refresh complete event be triggered. Only can be called on
-     * loading more.
-     *
-     * <p>设置一个尾部视图刷新完成前的Hook回调
+     * 设置一个尾部视图刷新完成前的Hook回调
      *
      * @param callback Callback that should be called when refreshComplete() is called.
      */
@@ -1002,9 +942,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Whether it is refreshing state.
-     *
-     * <p>是否在刷新中
+     * 是否在刷新中
      *
      * @return Refreshing
      */
@@ -1013,9 +951,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Whether it is loading more state.
-     *
-     * <p>是否在加载更多种
+     * 是否在加载更多种
      *
      * @return Loading
      */
@@ -1024,9 +960,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Whether it is refresh successful.
-     *
-     * <p>是否刷新成功
+     * 是否刷新成功
      *
      * @return Is
      */
@@ -1035,19 +969,14 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Perform refresh complete, to reset the state to {@link SmoothRefreshLayout#SR_STATUS_INIT}
-     * and set the last refresh operation successfully.
-     *
-     * <p>完成刷新，刷新状态为成功
+     * 完成刷新，刷新状态为成功
      */
     public final void refreshComplete() {
         refreshComplete(true);
     }
 
     /**
-     * Perform refresh complete, to reset the state to {@link SmoothRefreshLayout#SR_STATUS_INIT}.
-     *
-     * <p>完成刷新，刷新状态`isSuccessful`
+     * 完成刷新，刷新状态`isSuccessful`
      *
      * @param isSuccessful Set the last refresh operation status
      */
@@ -1056,10 +985,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Perform refresh complete, delay to reset the state to {@link
-     * SmoothRefreshLayout#SR_STATUS_INIT} and set the last refresh operation successfully.
-     *
-     * <p>完成刷新，延迟`delayDurationToChangeState`时间
+     * 完成刷新，延迟`delayDurationToChangeState`时间
      *
      * @param delayDurationToChangeState Delay to change the state to {@link
      *     SmoothRefreshLayout#SR_STATUS_COMPLETE}
@@ -1069,10 +995,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Perform refresh complete, delay to reset the state to {@link
-     * SmoothRefreshLayout#SR_STATUS_INIT} and set the last refresh operation.
-     *
-     * <p>完成刷新，刷新状态`isSuccessful`，延迟`delayDurationToChangeState`时间
+     * 完成刷新，刷新状态`isSuccessful`，延迟`delayDurationToChangeState`时间
      *
      * @param delayDurationToChangeState Delay to change the state to {@link
      *     SmoothRefreshLayout#SR_STATUS_INIT}
@@ -1109,9 +1032,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Get the Header height, after the measurement is completed, the height will have value.
-     *
-     * <p>获取Header的高度，在布局计算完成前无法得到准确的值
+     * 获取Header的高度，在布局计算完成前无法得到准确的值
      *
      * @return Height default is -1
      */
@@ -1120,9 +1041,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Get the Footer height, after the measurement is completed, the height will have value.
-     *
-     * <p>获取Footer的高度，在布局计算完成前无法得到准确的值
+     * 获取Footer的高度，在布局计算完成前无法得到准确的值
      *
      * @return Height default is -1
      */
@@ -1131,18 +1050,14 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Perform auto refresh at once.
-     *
-     * <p>自动刷新并立即触发刷新回调
+     * 自动刷新并立即触发刷新回调
      */
     public boolean autoRefresh() {
         return autoRefresh(Constants.ACTION_NOTIFY, true);
     }
 
     /**
-     * If @param atOnce has been set to true. Auto perform refresh at once.
-     *
-     * <p>自动刷新，`atOnce`立即触发刷新回调
+     * 自动刷新，`atOnce`立即触发刷新回调
      *
      * @param atOnce Auto refresh at once
      */
@@ -1151,10 +1066,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param atOnce has been set to true. Auto perform refresh at once. If @param smooth has
-     * been set to true. Auto perform refresh will using smooth scrolling.
-     *
-     * <p>自动刷新，`atOnce`立即触发刷新回调，`smoothScroll`滚动到触发位置
+     * 自动刷新，`atOnce`立即触发刷新回调，`smoothScroll`滚动到触发位置
      *
      * @param atOnce Auto refresh at once
      * @param smoothScroll Auto refresh use smooth scrolling
@@ -1165,14 +1077,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The @param action can be used to specify the action to trigger refresh. If the `action` been
-     * set to `SR_ACTION_NOTHING`, we will not notify the refresh listener when in refreshing. If
-     * the `action` been set to `SR_ACTION_AT_ONCE`, we will notify the refresh listener at once. If
-     * the `action` been set to `SR_ACTION_NOTIFY`, we will notify the refresh listener when in
-     * refreshing be later If @param smooth has been set to true. Auto perform refresh will using
-     * smooth scrolling.
-     *
-     * <p>自动刷新，`action`触发刷新的动作，`smoothScroll`滚动到触发位置
+     * 自动刷新，`action`触发刷新的动作，`smoothScroll`滚动到触发位置
      *
      * @param action Auto refresh use action .{@link Constants#ACTION_NOTIFY}, {@link
      *     Constants#ACTION_AT_ONCE}, {@link Constants#ACTION_NOTHING}
@@ -1207,9 +1112,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Trigger refresh action directly
-     *
-     * <p>强制直接触发刷新
+     * 强制直接触发刷新
      */
     public boolean forceRefresh() {
         if (mIndicator.getHeaderHeight() <= 0 || isDisabledPerformRefresh()) {
@@ -1221,18 +1124,14 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Perform auto load more at once.
-     *
-     * <p>自动加载更多，并立即触发刷新回调
+     * 自动加载更多，并立即触发刷新回调
      */
     public boolean autoLoadMore() {
         return autoLoadMore(Constants.ACTION_NOTIFY, true);
     }
 
     /**
-     * If @param atOnce has been set to true. Auto perform load more at once.
-     *
-     * <p>自动加载更多，`atOnce`立即触发刷新回调
+     * 自动加载更多，`atOnce`立即触发刷新回调
      *
      * @param atOnce Auto load more at once
      */
@@ -1241,10 +1140,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param atOnce has been set to true. Auto perform load more at once. If @param smooth has
-     * been set to true. Auto perform load more will using smooth scrolling.
-     *
-     * <p>自动加载更多，`atOnce`立即触发刷新回调，`smoothScroll`滚动到触发位置
+     * 自动加载更多，`atOnce`立即触发刷新回调，`smoothScroll`滚动到触发位置
      *
      * @param atOnce Auto load more at once
      * @param smoothScroll Auto load more use smooth scrolling
@@ -1255,14 +1151,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The @param action can be used to specify the action to trigger refresh. If the `action` been
-     * set to `SR_ACTION_NOTHING`, we will not notify the refresh listener when in refreshing. If
-     * the `action` been set to `SR_ACTION_AT_ONCE`, we will notify the refresh listener at once. If
-     * the `action` been set to `SR_ACTION_NOTIFY`, we will notify the refresh listener when in
-     * refreshing be later If @param smooth has been set to true. Auto perform load more will using
-     * smooth scrolling.
-     *
-     * <p>自动加载更多，`action`触发加载更多的动作，`smoothScroll`滚动到触发位置
+     * 自动加载更多，`action`触发加载更多的动作，`smoothScroll`滚动到触发位置
      *
      * @param action Auto load more use action.{@link Constants#ACTION_NOTIFY}, {@link
      *     Constants#ACTION_AT_ONCE}, {@link Constants#ACTION_NOTHING}
@@ -1296,9 +1185,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Trigger load more action directly
-     *
-     * <p>强制直接触发加载更多
+     * 强制直接触发加载更多
      */
     public boolean forceLoadMore() {
         if (mIndicator.getFooterHeight() <= 0 || isDisabledPerformLoadMore()) {
@@ -1310,9 +1197,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the resistance while you are moving.
-     *
-     * <p>移动刷新视图时候的移动阻尼
+     * 移动刷新视图时候的移动阻尼
      *
      * @param resistance Resistance
      */
@@ -1321,9 +1206,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the resistance while you are moving Footer.
-     *
-     * <p>移动Footer视图时候的移动阻尼
+     * 移动Footer视图时候的移动阻尼
      *
      * @param resistance Resistance
      */
@@ -1332,9 +1215,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the resistance while you are moving Header.
-     *
-     * <p>移动Header视图时候的移动阻尼
+     * 移动Header视图时候的移动阻尼
      *
      * @param resistance Resistance
      */
@@ -1343,9 +1224,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the height ratio of the trigger refresh.
-     *
-     * <p>设置触发刷新时的位置占刷新视图的高度比
+     * 设置触发刷新时的位置占刷新视图的高度比
      *
      * @param ratio Height ratio
      */
@@ -1354,9 +1233,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the Header height ratio of the trigger refresh.
-     *
-     * <p>设置触发下拉刷新时的位置占Header视图的高度比
+     * 设置触发下拉刷新时的位置占Header视图的高度比
      *
      * @param ratio Height ratio
      */
@@ -1365,9 +1242,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the Footer height ratio of the trigger refresh.
-     *
-     * <p>设置触发加载更多时的位置占Footer视图的高度比
+     * 设置触发加载更多时的位置占Footer视图的高度比
      *
      * @param ratio Height ratio
      */
@@ -1376,9 +1251,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the offset of keep view in refreshing occupies the height ratio of the refresh view.
-     *
-     * <p>刷新中保持视图位置占刷新视图的高度比（默认:`1f`）,该属性的值必须小于等于触发刷新高度比才会有效果， 当开启了{@link
+     * 刷新中保持视图位置占刷新视图的高度比（默认:`1f`）,该属性的值必须小于等于触发刷新高度比才会有效果， 当开启了{@link
      * SmoothRefreshLayout#isEnabledKeepRefreshView}后，该属性会生效
      *
      * @param ratio Height ratio
@@ -1389,9 +1262,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the offset of keep Header in refreshing occupies the height ratio of the Header.
-     *
-     * <p>刷新中保持视图位置占Header视图的高度比（默认:`1f`）,该属性的值必须小于等于触发刷新高度比才会有效果
+     * 刷新中保持视图位置占Header视图的高度比（默认:`1f`）,该属性的值必须小于等于触发刷新高度比才会有效果
      *
      * @param ratio Height ratio
      */
@@ -1400,9 +1271,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the offset of keep Footer in refreshing occupies the height ratio of the Footer.
-     *
-     * <p>刷新中保持视图位置占Header视图的高度比（默认:`1f`）,该属性的值必须小于等于触发刷新高度比才会有效果
+     * 刷新中保持视图位置占Header视图的高度比（默认:`1f`）,该属性的值必须小于等于触发刷新高度比才会有效果
      *
      * @param ratio Height ratio
      */
@@ -1411,9 +1280,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the max duration for Cross-Boundary-Rebound(OverScroll).
-     *
-     * <p>设置越界回弹效果弹出时的最大持续时长（默认:`350`）
+     * 设置越界回弹效果弹出时的最大持续时长（默认:`350`）
      *
      * @param duration Duration
      */
@@ -1422,9 +1289,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the min duration for Cross-Boundary-Rebound(OverScroll).
-     *
-     * <p>设置越界回弹效果弹出时的最小持续时长（默认:`100`）
+     * 设置越界回弹效果弹出时的最小持续时长（默认:`100`）
      *
      * @param duration Duration
      */
@@ -1433,9 +1298,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the duration for Fling back.
-     *
-     * <p>设置越界回弹效果回弹时的持续时长（默认:`550`）
+     * 设置越界回弹效果回弹时的持续时长（默认:`550`）
      *
      * @param duration Duration
      */
@@ -1444,9 +1307,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the duration of return back to the start position.
-     *
-     * <p>设置刷新完成回滚到起始位置的时间
+     * 设置刷新完成回滚到起始位置的时间
      *
      * @param duration Millis
      */
@@ -1456,9 +1317,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the duration of Header return to the start position.
-     *
-     * <p>设置Header刷新完成回滚到起始位置的时间
+     * 设置Header刷新完成回滚到起始位置的时间
      *
      * @param duration Millis
      */
@@ -1467,9 +1326,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the duration of Footer return to the start position.
-     *
-     * <p>设置Footer刷新完成回滚到起始位置的时间
+     * 设置Footer刷新完成回滚到起始位置的时间
      *
      * @param duration Millis
      */
@@ -1478,9 +1335,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the duration of return to the keep refresh view position.
-     *
-     * <p>设置回滚到保持刷新视图位置的时间
+     * 设置回滚到保持刷新视图位置的时间
      *
      * @param duration Millis
      */
@@ -1490,9 +1345,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the duration of return to the keep refresh view position when Header moves.
-     *
-     * <p>设置回滚到保持Header视图位置的时间
+     * 设置回滚到保持Header视图位置的时间
      *
      * @param duration Millis
      */
@@ -1501,9 +1354,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the duration of return to the keep refresh view position when Footer moves.
-     *
-     * <p>设置回顾到保持Footer视图位置的时间
+     * 设置回顾到保持Footer视图位置的时间
      *
      * @param duration Millis
      */
@@ -1512,9 +1363,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the max can move offset occupies the height ratio of the refresh view.
-     *
-     * <p>设置最大移动距离占刷新视图的高度比
+     * 设置最大移动距离占刷新视图的高度比
      *
      * @param ratio The max ratio of refresh view
      */
@@ -1523,9 +1372,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the max can move offset occupies the height ratio of the Header.
-     *
-     * <p>设置最大移动距离占Header视图的高度比
+     * 设置最大移动距离占Header视图的高度比
      *
      * @param ratio The max ratio of Header view
      */
@@ -1534,9 +1381,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the max can move offset occupies the height ratio of the Footer.
-     *
-     * <p>设置最大移动距离占Footer视图的高度比
+     * 设置最大移动距离占Footer视图的高度比
      *
      * @param ratio The max ratio of Footer view
      */
@@ -1545,9 +1390,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has set to autoRefresh.
-     *
-     * <p>是否处于自动刷新刷新
+     * 是否处于自动刷新刷新
      *
      * @return Enabled
      */
@@ -1556,9 +1399,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has set enabled overScroll.
-     *
-     * <p>是否已经开启越界回弹
+     * 是否已经开启越界回弹
      *
      * @return Enabled
      */
@@ -1567,9 +1408,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. Will supports over scroll.
-     *
-     * <p>设置开始越界回弹
+     * 设置开始越界回弹
      *
      * @param enable Enable
      */
@@ -1582,9 +1421,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has set enabled to intercept the touch event while loading.
-     *
-     * <p>是否已经开启刷新中拦截消耗触摸事件
+     * 是否已经开启刷新中拦截消耗触摸事件
      *
      * @return Enabled
      */
@@ -1593,9 +1430,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. Will intercept the touch event while loading.
-     *
-     * <p>开启刷新中拦截消耗触摸事件
+     * 开启刷新中拦截消耗触摸事件
      *
      * @param enable Enable
      */
@@ -1608,9 +1443,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to pull to refresh.
-     *
-     * <p>是否已经开启拉动刷新，下拉或者上拉到触发刷新位置即立即触发刷新
+     * 是否已经开启拉动刷新，下拉或者上拉到触发刷新位置即立即触发刷新
      *
      * @return Enabled
      */
@@ -1619,10 +1452,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. When the current pos >= refresh offsets perform
-     * refresh.
-     *
-     * <p>设置开启拉动刷新,下拉或者上拉到触发刷新位置即立即触发刷新
+     * 设置开启拉动刷新,下拉或者上拉到触发刷新位置即立即触发刷新
      *
      * @param enable Pull to refresh
      */
@@ -1635,9 +1465,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to enabled Header drawerStyle.
-     *
-     * <p>是否已经开启Header的抽屉效果，即Header在Content下面
+     * 是否已经开启Header的抽屉效果，即Header在Content下面
      *
      * @return Enabled
      */
@@ -1646,9 +1474,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true.Enable Header drawerStyle.
-     *
-     * <p>设置开启Header的抽屉效果，即Header在Content下面,由于该效果需要改变层级关系，所以需要重新布局
+     * 设置开启Header的抽屉效果，即Header在Content下面,由于该效果需要改变层级关系，所以需要重新布局
      *
      * @param enable enable Header drawerStyle
      */
@@ -1663,9 +1489,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to enabled Footer drawerStyle.
-     *
-     * <p>是否已经开启Footer的抽屉效果，即Footer在Content下面
+     * 是否已经开启Footer的抽屉效果，即Footer在Content下面
      *
      * @return Enabled
      */
@@ -1674,9 +1498,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true.Enable Footer drawerStyle.
-     *
-     * <p>设置开启Footer的抽屉效果，即Footer在Content下面,由于该效果需要改变层级关系，所以需要重新布局
+     * 设置开启Footer的抽屉效果，即Footer在Content下面,由于该效果需要改变层级关系，所以需要重新布局
      *
      * @param enable enable Footer drawerStyle
      */
@@ -1691,9 +1513,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to disabled perform refresh.
-     *
-     * <p>是否已经关闭触发下拉刷新
+     * 是否已经关闭触发下拉刷新
      *
      * @return Disabled
      */
@@ -1702,9 +1522,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param disable has been set to true. Will never perform refresh.
-     *
-     * <p>设置是否关闭触发下拉刷新
+     * 设置是否关闭触发下拉刷新
      *
      * @param disable Disable perform refresh
      */
@@ -1718,9 +1536,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to disabled refresh.
-     *
-     * <p>是否已经关闭刷新
+     * 是否已经关闭刷新
      *
      * @return Disabled
      */
@@ -1729,9 +1545,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param disable has been set to true.Will disable refresh.
-     *
-     * <p>设置是否关闭刷新
+     * 设置是否关闭刷新
      *
      * @param disable Disable refresh
      */
@@ -1745,9 +1559,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to disabled perform load more.
-     *
-     * <p>是否已经关闭触发加载更多
+     * 是否已经关闭触发加载更多
      *
      * @return Disabled
      */
@@ -1756,9 +1568,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param disable has been set to true.Will never perform load more.
-     *
-     * <p>设置是否关闭触发加载更多
+     * 设置是否关闭触发加载更多
      *
      * @param disable Disable perform load more
      */
@@ -1772,9 +1582,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to disabled load more.
-     *
-     * <p>是否已经关闭加载更多
+     * 是否已经关闭加载更多
      *
      * @return Disabled
      */
@@ -1783,9 +1591,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param disable has been set to true. Will disable load more.
-     *
-     * <p>设置关闭加载更多
+     * 设置关闭加载更多
      *
      * @param disable Disable load more
      */
@@ -1799,9 +1605,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to enabled the old touch handling logic.
-     *
-     * <p>是否已经启用老版本的事件处理逻辑
+     * 是否已经启用老版本的事件处理逻辑
      *
      * @return Enabled
      */
@@ -1810,10 +1614,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. Frame will use the old version of the touch event
-     * handling logic.
-     *
-     * <p>设置开启老版本的事件处理逻辑，老版本的逻辑会导致部分场景下体验下降，例如拉出刷新视图再收回视图，
+     * 设置开启老版本的事件处理逻辑，老版本的逻辑会导致部分场景下体验下降，例如拉出刷新视图再收回视图，
      * 当刷新视图回到顶部后缓慢滑动会导致内容视图触发按下效果，视觉上产生割裂，整体性较差但兼容性最好。
      * 新版本的逻辑将一直向下传递触摸事件，不会产生割裂效果，但同时由于需要避免触发长按事件，取巧性的利用了偏移进行规避，
      * 可能导致极个别情况下兼容没有老版本的逻辑好，可按需切换。切莫在处理事件处理过程中切换！
@@ -1833,9 +1634,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to disabled when horizontal move.
-     *
-     * <p>是否已经设置响应其它方向滑动
+     * 是否已经设置响应其它方向滑动
      *
      * @return Disabled
      */
@@ -1844,9 +1643,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set whether to filter the horizontal moves.
-     *
-     * <p>设置响应其它方向滑动，当内容视图含有需要响应其它方向滑动的子视图时，需要设置该属性，否则子视图无法响应其它方向的滑动
+     * 设置响应其它方向滑动，当内容视图含有需要响应其它方向滑动的子视图时，需要设置该属性，否则子视图无法响应其它方向的滑动
      *
      * @param disable Enable
      */
@@ -1859,9 +1656,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to enabled load more has no more data.
-     *
-     * <p>是否已经开启加载更多完成已无更多数据，自定义Footer可根据该属性判断是否显示无更多数据的提示
+     * 是否已经开启加载更多完成已无更多数据，自定义Footer可根据该属性判断是否显示无更多数据的提示
      *
      * @return Enabled
      */
@@ -1870,10 +1665,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. The Footer will show no more data and will never
-     * trigger load more.
-     *
-     * <p>设置开启加载更多完成已无更多数据，当该属性设置为`true`时，将不再触发加载更多
+     * 设置开启加载更多完成已无更多数据，当该属性设置为`true`时，将不再触发加载更多
      *
      * @param enable Enable no more data
      */
@@ -1887,9 +1679,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to enabled. Load more will be disabled when the content is not full.
-     *
-     * <p>是否已经设置了内容视图未满屏时关闭加载更多
+     * 是否已经设置了内容视图未满屏时关闭加载更多
      *
      * @return Disabled
      */
@@ -1898,10 +1688,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param disable has been set to true.Load more will be disabled when the content is not
-     * full.
-     *
-     * <p>设置当内容视图未满屏时关闭加载更多
+     * 设置当内容视图未满屏时关闭加载更多
      *
      * @param disable Disable load more when the content is not full
      */
@@ -1914,9 +1701,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to enabled when Footer has no more data and no spring back.
-     *
-     * <p>是否已经开启加载更多完成已无更多数据且不需要回滚动作
+     * 是否已经开启加载更多完成已无更多数据且不需要回滚动作
      *
      * @return Enabled
      */
@@ -1925,9 +1710,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. When there is no more data and no spring back.
-     *
-     * <p>设置开启加载更多完成已无更多数据且不需要回滚动作，当该属性设置为`true`时，将不再触发加载更多
+     * 设置开启加载更多完成已无更多数据且不需要回滚动作，当该属性设置为`true`时，将不再触发加载更多
      *
      * @param enable Enable no more data
      */
@@ -1941,9 +1724,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to keep refresh view while loading.
-     *
-     * <p>是否已经开启保持刷新视图
+     * 是否已经开启保持刷新视图
      *
      * @return Enabled
      */
@@ -1952,10 +1733,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true.When the current pos> = keep refresh view pos, it rolls
-     * back to the keep refresh view pos to perform refresh and remains until the refresh completed.
-     *
-     * <p>开启刷新中保持刷新视图位置
+     * 开启刷新中保持刷新视图位置
      *
      * @param enable Keep refresh view
      */
@@ -1972,9 +1750,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to perform load more when the content view scrolling to bottom.
-     *
-     * <p>是否已经开启到底部自动加载更多
+     * 是否已经开启到底部自动加载更多
      *
      * @return Enabled
      */
@@ -1983,10 +1759,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true.When the content view scrolling to bottom, it will be
-     * perform load more.
-     *
-     * <p>开启到底自动加载更多
+     * 开启到底自动加载更多
      *
      * @param enable Enable
      */
@@ -1999,9 +1772,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to perform refresh when the content view scrolling to top.
-     *
-     * <p>是否已经开启到顶自动刷新
+     * 是否已经开启到顶自动刷新
      *
      * @return Enabled
      */
@@ -2010,10 +1781,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true.When the content view scrolling to top, it will be
-     * perform refresh.
-     *
-     * <p>开启到顶自动刷新
+     * 开启到顶自动刷新
      *
      * @param enable Enable
      */
@@ -2026,9 +1794,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to pinned refresh view while loading.
-     *
-     * <p>是否已经开启刷新过程中固定刷新视图且不响应触摸移动
+     * 是否已经开启刷新过程中固定刷新视图且不响应触摸移动
      *
      * @return Enabled
      */
@@ -2055,9 +1821,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to pinned content view while loading.
-     *
-     * <p>是否已经开启了固定内容视图
+     * 是否已经开启了固定内容视图
      *
      * @return Enabled
      */
@@ -2066,9 +1830,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. The content view will be pinned in the start pos.
-     *
-     * <p>设置开启固定内容视图
+     * 设置开启固定内容视图
      *
      * @param enable Pin content view
      */
@@ -2084,9 +1846,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * The flag has been set to perform refresh when Fling.
-     *
-     * <p>是否已经开启了当收回刷新视图的手势被触发且当前位置大于触发刷新的位置时，将可以触发刷新同时将不存在Fling效果的功能,
+     * 是否已经开启了当收回刷新视图的手势被触发且当前位置大于触发刷新的位置时，将可以触发刷新同时将不存在Fling效果的功能,
      *
      * @return Enabled
      */
@@ -2095,11 +1855,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * If @param enable has been set to true. When the gesture of retracting the refresh view is
-     * triggered and the current offset is greater than the trigger refresh offset, the fresh can be
-     * performed without the Fling effect.
-     *
-     * <p>当收回刷新视图的手势被触发且当前位置大于触发刷新的位置时，将可以触发刷新同时将不存在Fling效果
+     * 当收回刷新视图的手势被触发且当前位置大于触发刷新的位置时，将可以触发刷新同时将不存在Fling效果
      *
      * @param enable enable perform refresh when fling
      */
@@ -2124,9 +1880,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the Footer view.
-     *
-     * <p>设置Footer视图
+     * 设置Footer视图
      *
      * @param footer Footer view
      */
@@ -2159,9 +1913,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the Header view.
-     *
-     * <p>设置Header视图
+     * 设置Header视图
      *
      * @param header Header view
      */
@@ -2182,9 +1934,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the content view.
-     *
-     * <p>设置内容视图
+     * 设置内容视图
      *
      * @param content Content view
      */
@@ -2214,9 +1964,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the content view resource id.
-     *
-     * <p>设置内容视图
+     * 设置内容视图
      *
      * @param id Content view resource id
      */
@@ -2229,9 +1977,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Reset scroller interpolator.
-     *
-     * <p>重置Scroller的插值器
+     * 重置Scroller的插值器
      */
     public void resetScrollerInterpolator() {
         if (mSpringInterpolator != SPRING_INTERPOLATOR) {
@@ -2243,9 +1989,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     /**
-     * Set the scroller default interpolator.
-     *
-     * <p>设置Scroller的默认插值器
+     * 设置Scroller的默认插值器
      *
      * @param interpolator Scroller interpolator
      */

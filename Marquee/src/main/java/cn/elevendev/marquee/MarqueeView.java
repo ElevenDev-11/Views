@@ -31,7 +31,7 @@ public class MarqueeView<T> extends ViewFlipper {
     private boolean hasSetAnimDuration = false;
     private int animDuration = 1000;
     private int textSize = 14;
-    private int textColor = 0xff000000;
+    private int textColor = 0xff1a1a1a;
     private boolean singleLine = false;
 
     private int gravity = Gravity.LEFT | Gravity.CENTER_VERTICAL;
@@ -215,7 +215,6 @@ public class MarqueeView<T> extends ViewFlipper {
 
     /**
      * 根据字符串列表，启动翻页公告
-     *
      * @param messages 字符串列表
      */
     public void startWithList(List<T> messages) {
@@ -224,7 +223,6 @@ public class MarqueeView<T> extends ViewFlipper {
 
     /**
      * 根据字符串列表，启动翻页公告
-     *
      * @param messages     字符串列表
      * @param inAnimResId  进入动画的resID
      * @param outAnimResID 离开动画的resID
@@ -349,7 +347,6 @@ public class MarqueeView<T> extends ViewFlipper {
 
     /**
      * 设置进入动画和离开动画
-     *
      * @param inAnimResId  进入动画的resID
      * @param outAnimResID 离开动画的resID
      */
