@@ -125,6 +125,33 @@ public class MarqueeView<T> extends ViewFlipper {
     }
 
     /**
+     * 滚动修改方向
+     * @param direction
+     */
+    public void setDirection(int direction) {
+        this.direction = direction;
+        switch (direction) {
+            case DIRECTION_BOTTOM_TO_TOP:
+                inAnimResId = R.anim.bottom_in;
+                outAnimResId = R.anim.top_out;
+                break;
+            case DIRECTION_TOP_TO_BOTTOM:
+                inAnimResId = R.anim.top_in;
+                outAnimResId = R.anim.bottom_out;
+                break;
+            case DIRECTION_RIGHT_TO_LEFT:
+                inAnimResId = R.anim.right_in;
+                outAnimResId = R.anim.left_out;
+                break;
+            case DIRECTION_LEFT_TO_RIGHT:
+                inAnimResId = R.anim.left_in;
+                outAnimResId = R.anim.right_out;
+                break;
+        }
+    }
+
+
+    /**
      * 根据字符串，启动翻页公告
      * @param message 字符串
      */
