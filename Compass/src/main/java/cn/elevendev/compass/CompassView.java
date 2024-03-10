@@ -36,9 +36,9 @@ public class CompassView extends RelativeLayout implements SensorEventListener {
     private static final int DEFAULT_DEGREES_STEP = 2;
     private static final boolean DEFAULT_SHOW_ORIENTATION_LABEL = false;
     private static final boolean DEFAULT_SHOW_DEGREE_VALUE = false;
-    private static final int DEFAULT_ORIENTATION_LABEL_COLOR = Color.BLACK;
+    private static final int DEFAULT_ORIENTATION_LABEL_COLOR = Color.parseColor("#1a1a1a");
     private static final boolean DEFAULT_SHOW_BORDER = false;
-    private static final int DEFAULT_BORDER_COLOR = Color.BLACK;
+    private static final int DEFAULT_BORDER_COLOR = Color.parseColor("#1a1a1a");
 
 
     private ImageView mNeedleImageView;
@@ -99,11 +99,11 @@ public class CompassView extends RelativeLayout implements SensorEventListener {
             mShowBorder = typedArray.getBoolean(R.styleable.Compass_show_border, DEFAULT_SHOW_BORDER);
             mBorderColor = typedArray.getColor(R.styleable.Compass_border_color, DEFAULT_BORDER_COLOR);
 
-            mDegreesColor = typedArray.getColor(R.styleable.Compass_degree_color, Color.BLACK);
+            mDegreesColor = typedArray.getColor(R.styleable.Compass_degree_color, Color.parseColor("#1a1a1a"));
             mShowOrientationLabels = typedArray.getBoolean(R.styleable.Compass_show_orientation_labels, DEFAULT_SHOW_ORIENTATION_LABEL);
             mOrientationLabelsColor = typedArray.getColor(R.styleable.Compass_orientation_labels_color, DEFAULT_ORIENTATION_LABEL_COLOR);
 
-            mDegreeValueColor = typedArray.getColor(R.styleable.Compass_degree_value_color, Color.BLACK);
+            mDegreeValueColor = typedArray.getColor(R.styleable.Compass_degree_value_color, Color.parseColor("#1a1a1a"));
             mShowDegreeValue = typedArray.getBoolean(R.styleable.Compass_show_degree_value, DEFAULT_SHOW_DEGREE_VALUE);
 
             mDegreesStep = typedArray.getInt(R.styleable.Compass_degrees_step, DEFAULT_DEGREES_STEP);
@@ -146,7 +146,7 @@ public class CompassView extends RelativeLayout implements SensorEventListener {
                 dataLayout.setPadding(0, dataPaddingTop, 0, 0);
 
                 float degreeTextSize = width * TEXT_SIZE_FACTOR;
-                //mDegreeTextView.setTextSize(degreeTextSize);
+                mDegreeTextView.setTextSize(degreeTextSize);
             }
         });
 
