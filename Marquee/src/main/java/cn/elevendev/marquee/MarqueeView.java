@@ -150,6 +150,13 @@ public class MarqueeView<T> extends ViewFlipper {
         }
     }
 
+    /**
+     * 设置字体大小
+     * @param size
+     */
+    public void setTextSize(int size) {
+        this.textSize = size;
+    }
 
     /**
      * 根据字符串，启动翻页公告
