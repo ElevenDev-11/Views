@@ -38,7 +38,7 @@ public class ClassicFooter<T extends IIndicator> extends AbsClassicRefreshView<T
     public ClassicFooter(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         Bitmap bitmap =
-                BitmapFactory.decodeResource(getResources(), R.drawable.classic_arrow_icon);
+                BitmapFactory.decodeResource(getResources(), R.drawable.sr_classic_arrow_icon);
         Matrix matrix = new Matrix();
         matrix.postRotate(180);
         Bitmap dstBitmap =

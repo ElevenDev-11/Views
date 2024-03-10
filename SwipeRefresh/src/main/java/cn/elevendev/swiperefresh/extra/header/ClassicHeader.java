@@ -31,7 +31,7 @@ public class ClassicHeader<T extends IIndicator> extends AbsClassicRefreshView<T
 
     public ClassicHeader(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        mArrowImageView.setImageResource(R.drawable.classic_arrow_icon);
+        mArrowImageView.setImageResource(R.drawable.sr_classic_arrow_icon);
     }
 
     public void setPullDownToRefreshRes(@StringRes int pullDownToRefreshRes) {

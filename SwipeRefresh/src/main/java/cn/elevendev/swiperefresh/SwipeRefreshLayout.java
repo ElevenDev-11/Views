@@ -50,6 +50,7 @@ import cn.elevendev.swiperefresh.utils.ScrollCompat;
 import cn.elevendev.swiperefresh.utils.ViewCatcherUtil;
 
 public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingParent3, NestedScrollingChild3 {
+    // status
     public static final byte SR_STATUS_INIT = 1;
     public static final byte SR_STATUS_PREPARE = 2;
     public static final byte SR_STATUS_REFRESHING = 3;
