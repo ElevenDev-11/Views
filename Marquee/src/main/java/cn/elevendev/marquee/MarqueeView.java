@@ -28,9 +28,9 @@ import cn.elevendev.marquee.Utils.Util;
 
 public class MarqueeView<T> extends ViewFlipper {
 
-    private int interval = 2000;
+    private int interval = 3000;
     private boolean hasSetAnimDuration = false;
-    private int animDuration = 2000;
+    private int animDuration = 1000;
     private int textSize = 14;
     private int textColor = 0xff1a1a1a;
     private boolean singleLine = false;
@@ -168,6 +168,38 @@ public class MarqueeView<T> extends ViewFlipper {
     }
     public void setTextColor(String colorStr) {
         this.textColor = Color.parseColor(colorStr);
+    }
+
+    /**
+     * 设置滚动时间
+     * @param interval
+     */
+    public void setInterval(int interval) {
+        this.interval = interval;
+    }
+
+    /**
+     * 设置动画持续时间
+     * @param animDuration
+     */
+    public void setAnimDuration(int animDuration) {
+        this.animDuration = animDuration;
+    }
+
+    /**
+     * 设置是否单行显示
+     * @param singleLine
+     */
+    public void setSingleLine(boolean singleLine) {
+        this.singleLine = singleLine;
+    }
+
+    /**
+     * 设置文本对齐方式
+     * @param gravity
+     */
+    public void setGravity(int gravity) {
+        this.gravity = gravity;
     }
 
     /**
