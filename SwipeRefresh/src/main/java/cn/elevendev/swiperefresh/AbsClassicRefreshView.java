@@ -3,7 +3,9 @@ package cn.elevendev.swiperefresh;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
@@ -79,6 +81,14 @@ public abstract class AbsClassicRefreshView<T extends IIndicator> extends Relati
         mArrowImageView.clearAnimation();
         mArrowImageView.setVisibility(VISIBLE);
         mProgressBar.setVisibility(INVISIBLE);
+
+        mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+        mLastUpdateTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+
+        ViewGroup.LayoutParams layoutParams = mArrowImageView.getLayoutParams();
+        layoutParams.width = PixelUtl.dp2px(getContext(),30);
+        layoutParams.height = PixelUtl.dp2px(getContext(),30);
+        mArrowImageView.setLayoutParams(layoutParams);
     }
 
     protected void createClassicViews() {

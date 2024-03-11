@@ -17,6 +17,7 @@ import android.widget.ViewFlipper;
 
 import androidx.annotation.AnimRes;
 import androidx.annotation.FontRes;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import java.util.ArrayList;
@@ -148,6 +149,57 @@ public class MarqueeView<T> extends ViewFlipper {
                 outAnimResId = R.anim.right_out;
                 break;
         }
+    }
+
+    /**
+     * 设置字体大小
+     * @param size
+     */
+    public void setTextSize(int size) {
+        this.textSize = size;
+    }
+
+    /**
+     * 设置字体颜色
+     * @param color
+     */
+    public void setTextColor(int color) {
+        this.textColor = ContextCompat.getColor(getContext(), color);
+    }
+    public void setTextColor(String colorStr) {
+        this.textColor = Color.parseColor(colorStr);
+    }
+
+    /**
+     * 设置滚动时间
+     * @param interval
+     */
+    public void setInterval(int interval) {
+        this.interval = interval;
+    }
+
+    /**
+     * 设置动画持续时间
+     * @param animDuration
+     */
+    public void setAnimDuration(int animDuration) {
+        this.animDuration = animDuration;
+    }
+
+    /**
+     * 设置是否单行显示
+     * @param singleLine
+     */
+    public void setSingleLine(boolean singleLine) {
+        this.singleLine = singleLine;
+    }
+
+    /**
+     * 设置文本对齐方式
+     * @param gravity
+     */
+    public void setGravity(int gravity) {
+        this.gravity = gravity;
     }
 
     /**
