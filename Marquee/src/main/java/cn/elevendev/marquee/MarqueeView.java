@@ -151,6 +151,37 @@ public class MarqueeView<T> extends ViewFlipper {
         }
     }
 
+    /**
+     * 设置字体大小
+     * @param size
+     */
+    public void setTextSize(int size) {
+        this.textSize = size;
+    }
+
+    /**
+     * 设置字体颜色
+     * @param color
+     */
+    public void setTextColor(int color) {
+        this.textColor = color;
+    }
+    public void setTextColor(String colorStr) {
+        this.textColor = Color.parseColor(colorStr);
+    }
+
+    /**
+     * 设置滚动时间
+     * @param interval
+     */
+    public void setInterval(int interval) {
+        this.interval = interval;
+    }
+
+    /**
+     * 设置动画持续时间
+     * @param animDuration
+     */
     public void setAnimDuration(int animDuration) {
         this.animDuration = animDuration;
     }
@@ -170,6 +201,8 @@ public class MarqueeView<T> extends ViewFlipper {
     public void setGravity(int gravity) {
         this.gravity = gravity;
     }
+
+
 
     /**
      * 根据字符串，启动翻页公告
