@@ -151,24 +151,6 @@ public class MarqueeView<T> extends ViewFlipper {
         }
     }
 
-    /**
-     * 设置字体大小
-     * @param size
-     */
-    public void setTextSize(int size) {
-        this.textSize = size;
-    }
-
-    /**
-     * 设置字体颜色
-     * @param color
-     */
-    public void setTextColor(int color) {
-        this.textColor = ContextCompat.getColor(getContext(), color);
-    }
-    public void setTextColor(String colorStr) {
-        this.textColor = Color.parseColor(colorStr);
-    }
 
     /**
      * 根据字符串，启动翻页公告
