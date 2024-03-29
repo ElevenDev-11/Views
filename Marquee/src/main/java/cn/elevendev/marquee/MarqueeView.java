@@ -28,11 +28,11 @@ import cn.elevendev.marquee.Utils.Util;
 
 public class MarqueeView<T> extends ViewFlipper {
 
-    private int interval = 2000;
+    private int interval = 3000;
     private boolean hasSetAnimDuration = false;
-    private int animDuration = 2000;
+    private int animDuration = 1000;
     private int textSize = 14;
-    private int textColor = 0xff1a1a1a;
+    private int textColor = 0xFF1A1A1A;
     private boolean singleLine = false;
 
     private int gravity = Gravity.LEFT | Gravity.CENTER_VERTICAL;
