@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Banner" />
             <option value="$PROJECT_DIR$/Compass" />
             <option value="$PROJECT_DIR$/DiscreteSeekBar" />
             <option value="$PROJECT_DIR$/Marquee" />
