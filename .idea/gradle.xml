@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/Compass" />
             <option value="$PROJECT_DIR$/DiscreteSeekBar" />
             <option value="$PROJECT_DIR$/Marquee" />
+            <option value="$PROJECT_DIR$/RefreshLayout" />
             <option value="$PROJECT_DIR$/SwipeRefresh" />
             <option value="$PROJECT_DIR$/app" />
           </set>
